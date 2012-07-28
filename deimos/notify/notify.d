@@ -126,44 +126,44 @@ extern (C) {
 
     NotifyNotification* notify_notification_new(const(char)* summary, const(char)* body_, const(char)* icon);
 
-    bool notify_notification_update(NotifyNotification *notification, const(char)* summary, const(char)* body_, const(char)* icon);
+    bool notify_notification_update(NotifyNotification* notification, const(char)* summary, const(char)* body_, const(char)* icon);
 
-    bool notify_notification_show(NotifyNotification *notification, GError** error);
+    bool notify_notification_show(NotifyNotification* notification, GError** error);
 
-    void notify_notification_set_timeout(NotifyNotification *notification, int timeout);
+    void notify_notification_set_timeout(NotifyNotification* notification, int timeout);
 
-    void notify_notification_set_category(NotifyNotification *notification, const(char)* category);
+    void notify_notification_set_category(NotifyNotification* notification, const(char)* category);
 
-    void notify_notification_set_urgency(NotifyNotification *notification, NotifyUrgency urgency);
+    void notify_notification_set_urgency(NotifyNotification* notification, NotifyUrgency urgency);
 
-    void notify_notification_set_image_from_pixbuf(NotifyNotification *notification, GdkPixbuf* pixbuf);
+    void notify_notification_set_image_from_pixbuf(NotifyNotification* notification, GdkPixbuf* pixbuf);
 
-    void notify_notification_set_icon_from_pixbuf(NotifyNotification *notification, GdkPixbuf* icon);
+    void notify_notification_set_icon_from_pixbuf(NotifyNotification* notification, GdkPixbuf* icon);
 
-    void notify_notification_set_hint_int32(NotifyNotification *notification, const(char)* key, int value);
-    void notify_notification_set_hint_uint32(NotifyNotification *notification, const(char)* key, uint value);
+    void notify_notification_set_hint_int32(NotifyNotification* notification, const(char)* key, int value);
+    void notify_notification_set_hint_uint32(NotifyNotification* notification, const(char)* key, uint value);
 
-    void notify_notification_set_hint_double(NotifyNotification *notification, const(char)* key, double value);
+    void notify_notification_set_hint_double(NotifyNotification* notification, const(char)* key, double value);
 
-    void notify_notification_set_hint_string(NotifyNotification *notification, const(char)* key, const(char)* value);
+    void notify_notification_set_hint_string(NotifyNotification* notification, const(char)* key, const(char)* value);
 
-    void notify_notification_set_hint_byte(NotifyNotification *notification, const(char)* key, ubyte value);
+    void notify_notification_set_hint_byte(NotifyNotification* notification, const(char)* key, ubyte value);
 
-    void notify_notification_set_hint_byte_array(NotifyNotification *notification, const(char)* key, const(ubyte)* value, ulong len);
+    void notify_notification_set_hint_byte_array(NotifyNotification* notification, const(char)* key, const(ubyte)* value, ulong len);
 
-    void notify_notification_set_hint(NotifyNotification *notification, const(char)* key, GVariant* value);
+    void notify_notification_set_hint(NotifyNotification* notification, const(char)* key, GVariant* value);
 
-    void notify_notification_set_app_name(NotifyNotification *notification, const(char)* app_name);
+    void notify_notification_set_app_name(NotifyNotification* notification, const(char)* app_name);
 
-    void notify_notification_clear_hints(NotifyNotification notification);
+    void notify_notification_clear_hints(NotifyNotification* notification);
 
-    void notify_notification_add_action(NotifyNotification *notification, const(char)* action, const(char)* label,
+    void notify_notification_add_action(NotifyNotification* notification, const(char)* action, const(char)* label,
                                         NotifyActionCallback callback, void* user_data, GFreeFunc free_func);
 
-    void notify_notification_clear_actions(NotifyNotification *notification);
-    bool notify_notification_close(NotifyNotification *notification, GError** error);
+    void notify_notification_clear_actions(NotifyNotification* notification);
+    bool notify_notification_close(NotifyNotification* notification, GError** error);
 
-    int notify_notification_get_closed_reason(const NotifyNotification *notification);
+    int notify_notification_get_closed_reason(const NotifyNotification* notification);
 
 
 
